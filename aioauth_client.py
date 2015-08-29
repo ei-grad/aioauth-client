@@ -316,7 +316,7 @@ class OAuth2Client(Client):
         except Exception:
             raise web.HTTPBadRequest(
                 reason='Failed to obtain OAuth access token.')
-        return self.access_token
+        return data
 
 
 class BitbucketClient(OAuth1Client):
