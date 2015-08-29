@@ -759,13 +759,14 @@ class VKClient(OAuth2Client):
     """Support vk.com.
 
     * Dashboard: http://vk.com/editapp?id={consumer_key}
-    * Docs: http://vk.com/developers.php?oid=-17680044&p=Authorizing_Sites
-    * API reference: http://vk.com/developers.php?oid=-17680044&p=API_Method_Description
+    * Docs: http://vk.com/dev/auth_sites
+    * API reference: http://vk.com/dev/methods
+
     """
 
     authorize_url = 'http://api.vkontakte.ru/oauth/authorize'
     access_token_url = 'https://api.vkontakte.ru/oauth/access_token'
-    user_info_url = 'https://api.vk.com/method/getProfiles?fields=uid,first_name,last_name,nickname,sex,bdate,city,country,timezone,photo_big' # noqa
+    user_info_url = 'https://api.vk.com/method/users.get?fields=uid,first_name,last_name,nickname,sex,bdate,city,country,timezone,photo_big'  # noqa
     name = 'vk'
     base_url = 'https://api.vk.com'
 
